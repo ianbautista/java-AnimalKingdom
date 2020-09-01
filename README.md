@@ -11,24 +11,24 @@ Using a combination of abstract classes and lambda expressions, students will cr
 
 ## Instruction
 
-* [ ] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
-* [ ] Create an abstract class for animals
-  * [ ] All animals consume food the same way
-  * [ ] Each animal is assigned a unique number, a name, and year discovered regardless of classification.
+* [x] Please fork and clone this repository. This repository does not have a starter project, so create one inside of the cloned repository folder. Regularly commit and push your code as appropriate.
+* [x] Create an abstract class for animals
+  * [x] All animals consume food the same way
+  * [x] Each animal is assigned a unique number, a name, and year discovered regardless of classification.
 
-- [ ] Methods will return a string saying how that animal implements the action
-  - [ ] All animals can move, breath, reproduce. How they do that, so what string should get returned when the method is executed, varies by animal type.
+- [x] Methods will return a string saying how that animal implements the action
+  - [x] All animals can move, breath, reproduce. How they do that, so what string should get returned when the method is executed, varies by animal type.
 
-* [ ] Create classes for mammals, birds, fish
-  * [ ] Mammals move - walk, breath - lungs, reproduce - live births
-  * [ ] Birds move - fly, breath - lungs, reproduce - eggs
-  * [ ] Fish move - swim, breath - gills, reproduce - eggs
+* [x] Create classes for mammals, birds, fish
+  * [x] Mammals move - walk, breath - lungs, reproduce - live births
+  * [x] Birds move - fly, breath - lungs, reproduce - eggs
+  * [x] Fish move - swim, breath - gills, reproduce - eggs
 
 Hint: think about abstract classes and creating an ArrayList using an abstract class type.
 
 Create a collection for the animals using the following data
 
-* [ ] **Mammals:**
+* [x] **Mammals:**
 
     | Name      | Year Named |
     |-----------|-------|
@@ -40,7 +40,7 @@ Create a collection for the animals using the following data
     | Raccoon   | 1758  |
     | Bigfoot   | 2021  |
 
-* [ ] **Birds:**
+* [x] **Birds:**
 
     | Name      | Year Named |
     |-----------|------|
@@ -50,7 +50,7 @@ Create a collection for the animals using the following data
     | Parrot    | 1824 |
     | Swan      | 1758 |
 
-* [ ] **Fish:**
+* [x] **Fish:**
 
     | Name      | Year Named |
     |-----------|------|
