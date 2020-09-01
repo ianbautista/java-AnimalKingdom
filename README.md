@@ -64,8 +64,8 @@ Create a collection for the animals using the following data
   * [x] List all the animals order by how they move
   * [x] List only those animals the breath with lungs
   * [ ] List only those animals that breath with lungs and were named in 1758
-  * [ ] List only those animals that lay eggs and breath with lungs
-  * [ ] List alphabetically only those animals that were named in 1758
+  * [x] List only those animals that lay eggs and breath with lungs
+  * [x] List alphabetically only those animals that were named in 1758
 
 * Stretch Goal
   * [ ] For the list of animals, list alphabetically those animals that are mammals.
