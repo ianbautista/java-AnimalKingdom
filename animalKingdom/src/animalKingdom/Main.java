@@ -99,5 +99,6 @@ public class Main
     	List<Animal> animal1758List = filterAnimals(animalList, a -> (a.getYear() == 1758));
     	animal1758List.sort((a1,a2) -> a1.move().compareToIgnoreCase(a2.move()));
     	animal1758List.forEach((a) -> System.out.println(a));
+    	
 	}
 }
