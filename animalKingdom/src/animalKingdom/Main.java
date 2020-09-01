@@ -31,8 +31,7 @@ public class Main
     	Fish perch = new Fish("Perch", 1758);
 
     	System.out.println("\n*** MVP ***\n");
-    	System.out.println("\n*** List all the animals in descending order by year named ***\n");
-
+    	
     	// animal arrayList
     	List<Animal> animalList = new ArrayList<>();
     	animalList.add(panda);
@@ -50,5 +49,21 @@ public class Main
     	animalList.add(salmon);
     	animalList.add(catfish);
     	animalList.add(perch);
+
+    	// List all the animals in descending order by year named
+    	System.out.println("\n*** List all the animals in descending order by year named ***\n");
+    	animalList.sort((v1,v2) -> v2.getYear() - (v1.getYear()));
+    	animalList.forEach((v) -> System.out.println(v));
+
+    	// List all the animals alphabetically
+    	System.out.println("\n*** List all the animals alphabetically ***\n");
+    	animalList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+    	animalList.forEach((v) -> System.out.println(v));
+
+    	// List all the animals order by how they move
+    	System.out.println("\n*** List all the animals order by how they move ***\n");
+    	animalList.sort((v1,v2) -> v1.move().compareToIgnoreCase(v2.move()));
+    	animalList.forEach((v) -> System.out.println(v));
+
 	}
 }
