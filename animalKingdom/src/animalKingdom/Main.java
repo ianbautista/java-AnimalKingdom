@@ -5,6 +5,20 @@ import java.util.ArrayList;
 
 public class Main
 {
+
+	private static List<Animal> filterAnimals(List<Animal> animals, CheckAnimals tester)
+  	{
+	    List<Animal> templist = new ArrayList<>();
+	    for (Animal v : animals)
+	    {
+	      	if (tester.test(v))
+	      	{
+	        templist.add(v);
+	      	}
+	    }
+	    return templist;
+  	}
+
 	public static void main(String[] args)
 	{
 		System.out.println("Christian's Animal Kingdom!!!");
@@ -51,13 +65,25 @@ public class Main
     	animalList.add(perch);
 
     	// List all the animals in descending order by year named
-    	System.out.println("\n*** List all the animals in descending order by year named ***\n");
+    	System.out.println("\n*** List all the animals in descending order by year named ***");
     	animalList.sort((v1,v2) -> v2.getYear() - (v1.getYear()));
     	animalList.forEach((v) -> System.out.println(v));
 
     	// List all the animals alphabetically
-    	System.out.println("\n*** List all the animals alphabetically ***\n");
+    	System.out.println("\n*** List all the animals alphabetically ***");
     	animalList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
     	animalList.forEach((v) -> System.out.println(v));
+
+    	// List all the animals order by how they move
+    	System.out.println("\n*** List all the animals order by how they move ***");
+    	animalList.sort((v1,v2) -> v1.move().compareToIgnoreCase(v2.move()));
+    	animalList.forEach((v) -> System.out.println(v));
+
+    	// List only those animals the breath with lungs
+    	System.out.println("\n*** List only those animals the breath with lungs ***");
+    	List<Animal> lungsList = filterAnimals(animalList, v -> v.breath().equals("Lungs"));
+    	lungsList.forEach((v) -> System.out.println(v));
+
+
 	}
 }
