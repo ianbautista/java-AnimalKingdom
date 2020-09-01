@@ -59,11 +59,5 @@ public class Main
     	System.out.println("\n*** List all the animals alphabetically ***\n");
     	animalList.sort((v1,v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
     	animalList.forEach((v) -> System.out.println(v));
-
-    	// List all the animals order by how they move
-    	System.out.println("\n*** List all the animals order by how they move ***\n");
-    	animalList.sort((v1,v2) -> v1.move().compareToIgnoreCase(v2.move()));
-    	animalList.forEach((v) -> System.out.println(v));
-
 	}
 }
