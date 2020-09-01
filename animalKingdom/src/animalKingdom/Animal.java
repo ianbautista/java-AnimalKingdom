@@ -18,6 +18,25 @@ abstract class Animal
 		this.yearDiscovered = yearDiscovered;
 	}
 
+	abstract String move();
+	abstract String breath();
+	abstract String reproduce();
 
+	// consumes food setter
+	void consumeFood(int food)
+	{
+		this.food =+ food;
+	}
 
+	// name getter
+	String getName()
+	{
+		return name;
+	}
+
+	// yearDiscovered getter
+	int getYearDiscovered()
+	{
+		return yearDiscovered;
+	}
 }
