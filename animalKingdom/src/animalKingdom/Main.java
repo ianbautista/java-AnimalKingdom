@@ -29,5 +29,26 @@ public class Main
 	    Fish salmon = new Fish("Salmon", 1758);
     	Fish catfish = new Fish("Catfish", 1817);
     	Fish perch = new Fish("Perch", 1758);
+
+    	System.out.println("\n*** MVP ***\n");
+    	System.out.println("\n*** List all the animals in descending order by year named ***\n");
+
+    	// animal arrayList
+    	List<Animal> animalList = new ArrayList<>();
+    	animalList.add(panda);
+    	animalList.add(zebra);
+    	animalList.add(koala);
+    	animalList.add(sloth);
+    	animalList.add(armadillo);
+    	animalList.add(raccoon);
+    	animalList.add(bigfoot);
+    	animalList.add(pigeon);
+    	animalList.add(peacock);
+    	animalList.add(toucan);
+    	animalList.add(parrot);
+    	animalList.add(swan);
+    	animalList.add(salmon);
+    	animalList.add(catfish);
+    	animalList.add(perch);
 	}
 }
