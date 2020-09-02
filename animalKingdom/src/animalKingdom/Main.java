@@ -109,7 +109,7 @@ public class Main
     	System.out.println("\n*** Stretch Goal ***\n");
 
     	// For the list of animals, list alphabetically those animals that are mammals.
-        // Armadillo live births walk lungs 1758
+        // Armadillo live births walk lungs 1758 
     	System.out.println("\n*** For the list of animals, list alphabetically those animals that are mammals ***");
     	List<Animal> mammalsList = filterAnimals(animalsList, (a) -> (a instanceof Mammals));
     	mammalsList.sort((a1,a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
