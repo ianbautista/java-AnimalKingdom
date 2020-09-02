@@ -24,4 +24,11 @@ public class Mammals extends Animal
 	{
 		return "live births";
 	}
+
+	//[Animals{id=6, name='Bigfoot', yearNamed=2021}
+	@Override
+	public String toString()
+	{
+		return "Animals{id=" + id + ", name='" + name + "', yearNamed=" + yearDiscovered + "}\n";
+	}
 }

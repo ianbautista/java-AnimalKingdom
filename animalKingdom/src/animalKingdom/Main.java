@@ -21,7 +21,7 @@ public class Main
 
 	public static void main(String[] args)
 	{
-		System.out.println("Christian's Animal Kingdom!!!");
+		System.out.println("\nChristian's Animal Kingdom!!!\n");
 
 		//mammals
 		Mammals panda = new Mammals("Panda", 1869);
@@ -44,61 +44,75 @@ public class Main
     	Fish catfish = new Fish("Catfish", 1817);
     	Fish perch = new Fish("Perch", 1758);
 
-    	System.out.println("\n*** MVP ***\n");
+    	System.out.println("\n*** MVP ***");
     	
     	// animal arrayList
-    	List<Animal> animalList = new ArrayList<>();
-    	animalList.add(panda);
-    	animalList.add(zebra);
-    	animalList.add(koala);
-    	animalList.add(sloth);
-    	animalList.add(armadillo);
-    	animalList.add(raccoon);
-    	animalList.add(bigfoot);
-    	animalList.add(pigeon);
-    	animalList.add(peacock);
-    	animalList.add(toucan);
-    	animalList.add(parrot);
-    	animalList.add(swan);
-    	animalList.add(salmon);
-    	animalList.add(catfish);
-    	animalList.add(perch);
+    	List<Animal> animalsList = new ArrayList<>();
+    	animalsList.add(panda);
+    	animalsList.add(zebra);
+    	animalsList.add(koala);
+    	animalsList.add(sloth);
+    	animalsList.add(armadillo);
+    	animalsList.add(raccoon);
+    	animalsList.add(bigfoot);
+    	animalsList.add(pigeon);
+    	animalsList.add(peacock);
+    	animalsList.add(toucan);
+    	animalsList.add(parrot);
+    	animalsList.add(swan);
+    	animalsList.add(salmon);
+    	animalsList.add(catfish);
+    	animalsList.add(perch);
+
 
     	// List all the animals in descending order by year named
     	System.out.println("\n*** List all the animals in descending order by year named ***");
-    	animalList.sort((a1,a2) -> a2.getYear() - (a1.getYear()));
-    	animalList.forEach((a) -> System.out.println(a));
+    	animalsList.sort((a1,a2) -> a2.getYearDiscovered() - (a1.getYearDiscovered()));
+    	System.out.println(animalsList);
 
     	// List all the animals alphabetically
     	System.out.println("\n*** List all the animals alphabetically ***");
-    	animalList.sort((a1,a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
-    	animalList.forEach((a) -> System.out.println(a));
+    	animalsList.sort((a1,a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    	System.out.println(animalsList);
 
     	// List all the animals order by how they move
     	System.out.println("\n*** List all the animals order by how they move ***");
-    	animalList.sort((a1,a2) -> a1.move().compareToIgnoreCase(a2.move()));
-    	animalList.forEach((a) -> System.out.println(a));
+    	animalsList.sort((a1,a2) -> a1.move().compareToIgnoreCase(a2.move()));
+    	System.out.println(animalsList);
 
     	// List only those animals the breath with lungs
+    	// Parrot eggs fly lungs 1824
     	System.out.println("\n*** List only those animals the breath with lungs ***");
-    	List<Animal> animalLungsList = filterAnimals(animalList, a -> a.breath().equals("Lungs"));
-    	animalLungsList.forEach((a) -> System.out.println(a));
+    	List<Animal> animalLungsList = filterAnimals(animalsList, a -> a.breath().equals("lungs"));
+    	animalLungsList.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYearDiscovered()));
 
     	// List only those animals that breath with lungs and were named in 1758
+    	// Swan eggs fly lungs 1758
     	System.out.println("\n*** List only those animals that breath with lungs and were named in 1758 ***");
-    	List<Animal> animalLungs1758List = filterAnimals(animalList, a -> (a.breath().equals("Lungs")) && (a.getYear() == 1758));
-    	animalLungs1758List.forEach((a) -> System.out.println(a));
+    	List<Animal> animalLungs1758List = filterAnimals(animalsList, a -> (a.breath().equals("lungs")) && (a.getYearDiscovered() == 1758));
+    	animalLungs1758List.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYearDiscovered()));
 
     	// List only those animals that lay eggs and breath with lungs
+    	// Parrot eggs fly lungs 1824
     	System.out.println("\n*** List only those animals the breath with lungs ***");
-    	List<Animal> animalEggLungsList = filterAnimals(animalList, a -> (a.breath().equals("Lungs")) && (a.reproduce().equals("eggs")));
-    	animalEggLungsList.forEach((a) -> System.out.println(a));
+    	List<Animal> animalEggLungsList = filterAnimals(animalsList, a -> (a.breath().equals("lungs")) && (a.reproduce().equals("eggs")));
+    	animalEggLungsList.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYearDiscovered()));
 
     	// List alphabetically only those animals that were named in 1758
+    	// Armadillo live births walk lungs 1758
     	System.out.println("\n*** List alphabetically only those animals that were named in 1758 ***");
-    	List<Animal> animal1758List = filterAnimals(animalList, a -> (a.getYear() == 1758));
-    	animal1758List.sort((a1,a2) -> a1.move().compareToIgnoreCase(a2.move()));
-    	animal1758List.forEach((a) -> System.out.println(a));
-    	
+    	List<Animal> animal1758List = filterAnimals(animalsList, a -> (a.getYearDiscovered() == 1758));
+    	animal1758List.sort((a1,a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    	animal1758List.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYearDiscovered()));
+
+    	// Stretch
+    	System.out.println("\n*** Stretch Goal ***\n");
+
+    	// For the list of animals, list alphabetically those animals that are mammals.
+        // Armadillo live births walk lungs 1758
+    	System.out.println("\n*** For the list of animals, list alphabetically those animals that are mammals ***");
+    	List<Animal> mammalsList = filterAnimals(animalsList, (a) -> (a instanceof Mammals));
+    	mammalsList.sort((a1,a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+    	mammalsList.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYearDiscovered()));
 	}
 }

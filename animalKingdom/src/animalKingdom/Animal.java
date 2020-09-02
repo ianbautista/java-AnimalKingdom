@@ -11,8 +11,8 @@ abstract class Animal
 	//default constructor
 	public Animal(String name, int yearDiscovered)
 	{
-		maxId++;
 		id = maxId;
+		maxId++;
 		this.food = 1;
 		this.name = name;
 		this.yearDiscovered = yearDiscovered;
